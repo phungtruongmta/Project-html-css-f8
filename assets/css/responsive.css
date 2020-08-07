@@ -1,0 +1,151 @@
+/* Mobile & Tablet */
+
+@media (max-width: 1023px) {
+     :root {
+        --header-height: 68px;
+        --navbar-height: 0px;
+    }
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+    .header {
+        position: fixed;
+        z-index: 10;
+        width: 100%;
+        top: 0;
+    }
+    .header__cart-list {
+        position: fixed;
+        top: var(--header-height);
+        width: 100%;
+        padding: 0 calc((100% - 644px) / 2);
+    }
+    .header__cart-list::before {
+        top: -25px;
+        height: 30px;
+        width: 28%;
+    }
+    .header__cart-list::after {
+        display: none;
+    }
+    .app__container {
+        margin-top: calc(var(--header-height) + var(--header-sort-bav-height));
+    }
+    .header__sort-bav {
+        display: flex;
+    }
+    .app__content {
+        padding-top: 10px;
+    }
+    .mobile-catagory {
+        display: block;
+    }
+    .footer-policy__link--last {
+        width: fit-content;
+    }
+}
+
+
+/* Tablet */
+
+@media (min-width:740px) and (max-width: 1023px) {
+    .hide-on-tablet {
+        display: none;
+    }
+    .header__cart {
+        width: 80px;
+        text-align: right;
+    }
+    .header__logo {
+        display: none;
+    }
+    .col.l-2.footer-policy__item,
+    .col.l-4.footer-policy__item {
+        padding: 24px 0 0 0;
+    }
+    .col.l-2.l-o-5.m-2.m-o-5 {
+        margin-left: 39.5%;
+    }
+}
+
+
+/* Mobile */
+
+@media(max-width:739px) {
+     :root {
+        --header-height: 56px;
+        --navbar-height: 0px;
+    }
+    .hide-on-mobile {
+        display: none;
+    }
+    .header__search {
+        display: none;
+    }
+    .header-with-search {
+        justify-content: space-between;
+    }
+    .header__logo,
+    .header__cart {
+        width: unset;
+    }
+    /* Bấm vào thẻ label này để hiện ra thanh tìm kiếm trên mobile */
+    .header__mobile-search-label {
+        padding: 2px 12px;
+        display: block;
+    }
+    .header__search-mobile {
+        display: flex;
+    }
+    .pagination-item {
+        margin: 0;
+    }
+    .pagination-item__link {
+        min-width: 35px;
+        font-size: 1.6rem;
+    }
+    .row.sm-gutter.app__content {
+        margin: 0 4px;
+    }
+    .header__logo-img {
+        width: 126px;
+    }
+    .grid.wide.footer__content {
+        padding: 0 16px;
+    }
+    .footer-policy__link::after {
+        display: none;
+    }
+    .footer-policy__link {
+        width: unset;
+    }
+    .col.l-2.l-o-2.m-4.c-12.footer-policy__item {
+        padding-top: 30px;
+    }
+    .col.l-2.footer-policy__item,
+    .col.l-4.footer-policy__item {
+        padding: 12px 0;
+    }
+    .catagory {
+        display: block;
+        position: fixed;
+        top: var(--header-height);
+        z-index: 10;
+        width: 60%;
+        left: -250px;
+        max-height: 100%;
+        overflow: auto;
+        opacity: 0;
+        transition: all linear 0.2s;
+    }
+    .catagory__heading {
+        display: none;
+    }
+    .header__catagory-checkbox:checked~.catagory {
+        left: 0;
+        opacity: 1;
+    }
+    .header__mobilde-catagory {
+        display: block;
+    }
+}
